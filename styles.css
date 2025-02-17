@@ -1,0 +1,1526 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 2px solid #ff0000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff0000;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 130px; /* Adjusted padding */
+    background-image: url('https://cdn.neowin.com/news/images/uploaded/2019/10/1569944859_amd_vs_nvidia.jpg'); /* Unsplash image */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    max-width: 300px;
+    margin: 20px;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* Reviews Section */
+
+.reviews-hero {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    background-color: #111;
+    background-image: url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/rtx_5090_rtx_5090d_gaming_performance_vs_rtx_4090_gaming_.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 100vh; /* Ensures the section is tall enough */
+    width: 100%;
+    position: relative;
+}
+
+
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.review-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-item {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.review-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.review-item span {
+    font-size: 0.9rem;
+    color: #ff0000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Shop Section */
+/* Shop Hero Section */
+/* Shop Hero Section */
+.shop-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://source.unsplash.com/1600x900/?graphics,card');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.shop-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.shop-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+	
+    z-index: 7;
+    max-width: 1300px;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.shop-hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Filters Section */
+.filters {
+    padding: 20px 0;
+    background: #111;
+}
+
+.filters .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.filter-group select {
+    padding: 5px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+.product-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.product-details .price {
+    font-size: 1.2rem;
+    color: #ff0000;
+    margin: 10px 0;
+}
+
+.product-details .description {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.product-details .btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-details .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Cart Popup */
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.cart-popup-content {
+    position: relative;
+    background: #111;
+    width: 90%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-cart:hover {
+    color: #ff0000;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.cart-item-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cart-item-details p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.cart-popup .checkout {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cart-popup .checkout:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    margin: 0;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    margin: 0;
+}
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/4090/rtx4090-gaming-x-slim-24g/msi-4090-gaming-x-slim-kv-bg-nolight.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+	
+}
+
+/* Mission Section */
+.mission {
+    padding: 80px 0;
+    background: #111;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.mission p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* History Section */
+.history {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.history h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.history p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 0;
+    background: #111;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Achievements Section */
+.achievements {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.achievement-item {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.achievement-item i {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.achievement-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.achievement-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+/* Scroll Animations (Specific to About Page) */
+.about-page section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-page section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific Slide-In Directions (About Page Only) */
+.about-page #mission.visible {
+    transform: translateX(-50px);
+}
+
+.about-page #history.visible {
+    transform: translateX(50px);
+}
+
+.about-page #team.visible {
+    transform: translateY(50px);
+}
+
+.about-page #achievements.visible {
+    transform: translateY(-50px);
+}
+
+/* Mouse Leave Animations (About Page Only) */
+.about-page body:not(:hover) section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+/* Features Hero Section */
+.features-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://cdn.videocardz.com/1/2024/03/17181046-7b8dadc7962ea9334a16dd8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.features-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.features-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 50px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.features-hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: white; /* White text */
+    font-weight: bold; /* Makes text stand out more */
+    -webkit-text-stroke: 2px black; /* Adds a strong black outline */
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black; /* Reinforces the outline for better visibility */
+}
+
+
+/* Features Grid */
+.features-grid {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+.features-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+/* Reviews Hero Section */
+.reviews-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.reviews-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.reviews-hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+.reviews-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.review-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.review-icon {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.review-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.review-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-author h4 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.review-author span {
+    font-size: 0.9rem;
+    color: #ff0000;
+}
+
+/* Floating Testimonials Section */
+.floating-testimonials {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.floating-testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.testimonial {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.testimonial.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+}
+/* Contact Hero Section */
+.contact-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://recipe.de/wp-content/uploads/AdobeStock_170263847_Support-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form-section .btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form-section .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Chatbot */
+.chatbot {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.chatbot-header {
+    padding: 10px;
+    background: #222;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.close-chatbot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-chatbot:hover {
+    color: #ff0000;
+}
+
+.chatbot-body {
+    padding: 10px;
+}
+
+.chatbot-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chatbot-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.chatbot-message.user {
+    background: #ff0000;
+    color: #fff;
+    text-align: right;
+}
+
+.chatbot-message.bot {
+    background: #222;
+    color: #fff;
+    text-align: left;
+}
+
+.chatbot-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.chatbot-input .btn {
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-input .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+}
+
+footer .btn {
+    padding: 10px 20px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+footer .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+/* Support Hero Section */
+.support-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://cdn.wccftech.com/wp-content/uploads/2021/04/geforce-rtx-3090-product-gallery-full-screen-3840-3-scaled-1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.support-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.support-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.support-hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.faq-question i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.active {
+    max-height: 200px;
+    padding: 15px 20px;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Contact Support Section */
+.contact-support {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    text-align: center;
+}
+
+.contact-support h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-support form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-support .btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-support .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Resources Section */
+.resources {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+}
+
+.resources h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.resource-card i {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.resource-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.resource-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.resource-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resource-card .btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    margin: 0;
+}

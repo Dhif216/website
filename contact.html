@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Graphic Card Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Graphic Card Store Logo"> <!-- Replace with your logo -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="landingpage.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="contact-hero" class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Reach out to us for any inquiries or support.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Our Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>High Performance</h3>
+                    <p>Delivering top-tier performance for gaming and professional use.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Advanced Cooling</h3>
+                    <p>Innovative cooling solutions for optimal performance.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Durable Build</h3>
+                    <p>Robust engineering for long-lasting reliability.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Stunning Visuals</h3>
+                    <p>Immersive graphics with ray tracing and 4K support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form-section" class="contact-form-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <div class="chatbot-header">
+            <h3>Chat with Us</h3>
+            <span id="close-chatbot" class="close-chatbot">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbot-messages" class="chatbot-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Type a message...">
+                <button id="send-message" class="btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Graphic Card Store. All rights reserved.</p>
+            <button id="open-chatbot-footer" class="btn">Chat with Us</button>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Contact Form and Chatbot -->
+    <script>
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simulate form submission (replace with actual backend integration)
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you at ${email}.`);
+            contactForm.reset();
+        });
+
+        // Chatbot
+        const chatbot = document.getElementById('chatbot');
+        const closeChatbotButton = document.getElementById('close-chatbot');
+        const openChatbotFooterButton = document.getElementById('open-chatbot-footer');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const sendMessageButton = document.getElementById('send-message');
+
+        // Open chatbot when footer CTA is clicked
+        openChatbotFooterButton.addEventListener('click', () => {
+            chatbot.style.display = 'block';
+        });
+
+        // Close chatbot
+        closeChatbotButton.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+        });
+
+        // Send message in chatbot
+        sendMessageButton.addEventListener('click', () => {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                // Add user message
+                const userMessage = document.createElement('div');
+                userMessage.className = 'chatbot-message user';
+                userMessage.textContent = message;
+                chatbotMessages.appendChild(userMessage);
+
+                // Add bot response
+                const botResponse = document.createElement('div');
+                botResponse.className = 'chatbot-message bot';
+                botResponse.textContent = 'Thank you for your message! How can we assist you further?';
+                chatbotMessages.appendChild(botResponse);
+
+                // Clear input
+                chatbotInput.value = '';
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        });
+
+        // Simulate chatbot opening after 10 seconds
+        setTimeout(() => {
+            chatbot.style.display = 'block';
+        }, 10000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Graphic Card Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Graphic Card Store Logo"> <!-- Replace with your logo -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="landingpage.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="open-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="shop-hero" class="shop-hero">
+        <div class="container">
+            <h1>Shop Graphic Cards</h1>
+            <p>Explore our collection of high-performance graphic cards.</p>
+        </div>
+    </section>
+
+    <!-- Filters and Sorting -->
+    <section id="filters" class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="workstation">Workstation</option>
+                    <option value="budget">Budget</option>
+                    <option value="high-end">High-End</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="product-grid" class="product-grid">
+        <div class="container">
+            <!-- Example Products (20 items) -->
+            <div class="product-card" data-category="gaming" data-price="699.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTSA_eo1_UMGhlgYe0HMY5-YXsolOrXaMS3b43WjNXe-4WT-Li5kSOQLE-qLAAhnbzjHoA9Y2uuPcQ6soLk7zMTctq2zHTbv9Si0Y77ncznshUKaSDYqSUw" alt="Graphic Card 1">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 3080</h3>
+                    <p class="price">$699.99</p>
+                    <p class="description">High-performance gaming card with ray tracing.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="workstation" data-price="999.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSm-uKkr0ZdaFbUPnXp4-1-KrcQbGzbaELGhu3KCD7IOSH9XJo5j2zKMp1ASJwg3XqmmtBbjsvf5afpy0hButsga15tQRYvUaLyOfDS1rY12MwXLcxW6bXovWs" alt="Graphic Card 2">
+                </div>
+                <div class="product-details">
+                    <h3>AMD Radeon Pro W6800</h3>
+                    <p class="price">$999.99</p>
+                    <p class="description">Professional-grade card for workstation use.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="budget" data-price="299.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQQKSU2-PSBIVzhZEoPbU7SkiKe_ASuy7QNKBbiLgMDYt9z7rZceoPJOuZVBl--oVQi6x8xTvnXHFo8bhuFtQrcduq84LKtrRIq_omXNDpn4GsrUreQAi8eFA" alt="Graphic Card 3">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA GTX 1660 Super</h3>
+                    <p class="price">$299.99</p>
+                    <p class="description">Affordable card for casual gaming.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTYH8GT2ZWozQV0uXvPabCb6RALnwIwsBkn-imsF3yQQ0wIzQrin-N6ie33jhz82YRlcdMTodQcucVygbiGISBpJGQm7DaJ39nHKfDm2jn5iqn2upGEiB3eLw" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTjtxk5t8D_mfApjgt4PFHQL7lAxdh5p0wWxUOv3qed9YdgD2X8gMyhGpuj7-LpiKAEYQEwt3iHLRK-wjTezzrI1PGx-waCSTpTin8sN_W3C440GdOO83cO" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQgW3XeExYw987HBAwx_MFYTDCTZNyG4MKQCDElhYDgnhGDgAfN10oGWuHKfj6bIU1obQccl5Jh__O_G0LDjr5IQkiuSCI3-5_I-O0c5CVO1iML3jeqKb7njQ" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTNcO8uEjWIdScS99rDF_-RVYJF6sqp7LaWk6N4HvWLb7LUTOMr8qDZsMDJluTaQtM9rRwKYA8spDlteaAEi_ZCTqvdcwfq2WZmmuJn0v5BI0cP1c19aQh5" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSjjV3HUAyIdjCTmw6EoBfKIBlnROjoJeR9s2GB0o9WBijSyRbY-iLPIkbyAYpAh7u1uz8wzRrv-OQu4qNSYapzBkLtLBwSiMVPciYAOFu9wneHzb-K4dE--g" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUqjSA4LiNqnuKWz1dc2fPxt5yggOfukcpi3MUKsj7HyhrxcJJnRE18esgLOHIXBAUEzwiu3M0Sm3O4Jkc5MVrprCu-dlX-y0Jtkji2mFBBtcpJJPK7EMTDw" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRvd_NO3V9QGMcae_m6mNRxfiT71yfyyun2naj0GWp9AYq2pg9DUYJqINjcU7rXaUI_PkHUluar2YydIIDjno6IQTpIrrCQ50G2x7hL-CahK9TnhmHCXoLj" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRym3sNyNkaobFXL9clBEBuLSQgXm0NeGRonBO5XD-emd-pX8J0IT7p9UwVJ6AbFAUflxhHsfk3a42-jvQD47KHdyAtI7k-Z4S8ji7kuDnJDCDq310EhvsP" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcST0phNuhl4pdIuOnUMgZIul9XXSiMxM8a65tM5vV1ucOO1WVTQdLx6KLUJ0CSPmf8yLRYdKNH2JxTdPUrd2PUmMiHM9ifuNW4vsfcDnvBQ-CGPk7EPQKxl" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTcvxt32ZjQAVnQ-1HyT8oz2g3LojmGU4CwQmrs35SMlXCR4qWYc8LlMA0fCXtUsbTLuXzABnl8DUD86BtQZHolPSFMcAIDEGI2YLzUnRFr5ISbK-BbIygsog" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTEzg4e9bLz186RDmhpI49WrBsMdjv_9-qnSEZTBelk05ROgLWfH-Lv5j5b_xqSCMJ9zxZIi55xGyOtULM1innPtgWgz96xdONLbi3lmKHn" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRu4nzklH68o4QjqtysG08-B21dJ-TZf5nQ21MWYn1TsiPAWx4vLsVw62sFskR_vgSRlXjcbrxzGiAxAI6G10pxsT9XWNPUXGgjd8YNoefNREWhnYo1zXSp" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRNBLg4-M0d1Fx3xdI1b-TVdpSmlECggBuNwJiOInUwW7EtTZcYJ5NTrT1cuydcMZjrWShpHpWanLMxbUyb1HAgY1xXE7NrMmRO56_dqODCkJ6EDhfr2OjN" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ4hDfu1NqVlLefoqWkwhfbT9p3q_vnxiQPaPV7J4t5qjA5j4Aigswplw4gYTNO9wwfgdXlMxmT0eg0srqZq_e0VNJ2xozB8PICj2yOO2k" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTb4af9gOOzpYdhdp7QHgZyNHO2cwK-P_IcJzyosYbHRpfMlQWMhFgoUuCikdq1FojKgU01rCBvjqowLg5bz3DEzDgGf9ZOZAbUotE9CZg" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ34eUfkKfdBnhF9nl1rf_95QH4BOrOMbJoVMALjxzZY7TeggnesZEF099haa86w2qI1v9vRKK-fDYkaJ0VdbSh0oC0ynMfDK90U9HA8TxPkAUS8NU5Am_GcA" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSd0h4arCstYQ7L-LpVW4IxYWgWyt_YdRxHURFpU5C9aEqVLEwEDNkYetEUNVNeuav45hSkVYJbt-I7crnGMSBMf5-QBWoPW6My5BAf4ql6nwqHbFEQoRINBA" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTmf-Kg9z9ku0s-vTYnxOU_HjVTQ51l4B3OI9FP1Q5DbxdloJFsjwLjmDVJybL_L5QDnef6kiHZSPgHq0g2CaNmqzJ_v31pMwbJv9F_Ko_ocjtoT_-OkF5uqg" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThopOfQ_CfVqj0UU9LUpYLPjRxd56QMe8MEtdSRPf7JtnJTXvLsmVmiLl2LWQwsePKBvdJOUTYkj5PhOzsrFMe_5H-nXwdP4kCNfG1KXO5JBkQGhF_mc5q" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQVbvbVJ-ZSidGD1mj7MJegW0qzNl-EeutTT9C_YuNcA4I5r7pqxoQqPijaBu0Sb_3oKyR0OfmkamOPybRuzotFLESpPdxvul2vJbqOPW4" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+			<div class="product-card" data-category="high-end" data-price="1599.99">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSPzBqQ2A2zhipXG-JEK0TIKwV5tJi1A3AdlJaQzaxVwX5He1EoUoryfUrOQcGG55j-DcFrd7LVm0se77zp2ymMqvkxDyrcE8nn6D3-P_zfVSd5EnQVGFfT" alt="Graphic Card 4">
+                </div>
+                <div class="product-details">
+                    <h3>NVIDIA RTX 4090</h3>
+                    <p class="price">$1599.99</p>
+                    <p class="description">Top-tier card for extreme performance.</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add 16 more products here -->
+            <!-- Example: Repeat the above structure with different data -->
+
+        </div>
+    </section>
+
+    <!-- Cart Popup -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-popup-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+            </div>
+            <button class="btn checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Graphic Card Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Filters, Sorting, Cart, and Popup -->
+    <script>
+        // Cart functionality
+        let cart = [];
+        const cartCountElement = document.getElementById('cart-count');
+        const cartItemsElement = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartPopup = document.getElementById('cart-popup');
+        const openCartButton = document.getElementById('open-cart');
+        const closeCartButton = document.getElementById('close-cart');
+
+        // Add to cart
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productCard = button.closest('.product-card');
+                const product = {
+                    name: productCard.querySelector('h3').textContent,
+                    price: parseFloat(productCard.querySelector('.price').textContent.replace('$', '')),
+                    image: productCard.querySelector('img').src,
+                };
+
+                cart.push(product);
+                updateCart();
+                alert(`${product.name} added to cart!`);
+            });
+        });
+
+        // Open cart popup
+        openCartButton.addEventListener('click', () => {
+            cartPopup.style.display = 'block';
+        });
+
+        // Close cart popup
+        closeCartButton.addEventListener('click', () => {
+            cartPopup.style.display = 'none';
+        });
+
+        // Update cart
+        function updateCart() {
+            cartCountElement.textContent = cart.length;
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h4>${item.name}</h4>
+                        <p>$${item.price.toFixed(2)}</p>
+                    </div>
+                `;
+                cartItemsElement.appendChild(cartItem);
+                total += item.price;
+            });
+
+            cartTotalElement.textContent = total.toFixed(2);
+        }
+
+        // Filter and Sort functionality
+        const categoryFilter = document.getElementById('category');
+        const sortFilter = document.getElementById('sort');
+        const productCards = document.querySelectorAll('.product-card');
+
+        categoryFilter.addEventListener('change', filterProducts);
+        sortFilter.addEventListener('change', sortProducts);
+
+        function filterProducts() {
+            const selectedCategory = categoryFilter.value;
+
+            productCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function sortProducts() {
+            const selectedSort = sortFilter.value;
+            const container = document.querySelector('.product-grid .container');
+            const cards = Array.from(productCards);
+
+            cards.sort((a, b) => {
+                const priceA = parseFloat(a.getAttribute('data-price'));
+                const priceB = parseFloat(b.getAttribute('data-price'));
+                const nameA = a.querySelector('h3').textContent;
+                const nameB = b.querySelector('h3').textContent;
+
+                switch (selectedSort) {
+                    case 'price-asc':
+                        return priceA - priceB;
+                    case 'price-desc':
+                        return priceB - priceA;
+                    case 'name-asc':
+                        return nameA.localeCompare(nameB);
+                    case 'name-desc':
+                        return nameB.localeCompare(nameA);
+                    default:
+                        return 0;
+                }
+            });
+
+            // Clear and re-append sorted cards
+            container.innerHTML = '';
+            cards.forEach(card => container.appendChild(card));
+        }
+    </script>
+</body>
+</html>

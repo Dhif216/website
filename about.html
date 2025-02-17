@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Graphic Card Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="about-page"> <!-- Wrapper for About Page -->
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Graphic Card Store Logo"> <!-- Replace with your logo -->
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="landingpage.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="about-hero" class="about-hero">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Driving innovation in gaming and professional graphics.</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="mission">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>We are committed to delivering cutting-edge graphic cards that empower gamers and professionals to push the boundaries of performance and creativity.</p>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="history">
+            <div class="container">
+                <h2>Our History</h2>
+                <p>Founded in 2010, Graphic Card Store started as a small team of enthusiasts with a passion for gaming and technology. Over the years, we’ve grown into a global leader in graphic card innovation, serving millions of customers worldwide.</p>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team">
+            <div class="container">
+                <h2>Meet the Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/200x200/?person" alt="Team Member 1">
+                        <h3>John Doe</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/200x200/?person" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>Lead Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/200x200/?person" alt="Team Member 3">
+                        <h3>Mike Johnson</h3>
+                        <p>Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <h2>Our Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <i class="fas fa-trophy"></i>
+                        <h3>10+ Industry Awards</h3>
+                        <p>Recognized for innovation and performance.</p>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-users"></i>
+                        <h3>1M+ Happy Customers</h3>
+                        <p>Serving gamers and professionals worldwide.</p>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>200% Growth</h3>
+                        <p>Consistent growth over the past decade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 Graphic Card Store. All rights reserved.</p>
+            </div>
+        </footer>
+    </div> <!-- End of About Page Wrapper -->
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.about-page section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+
+        // Trigger initial check on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+
+    <!-- JavaScript for Mouse Leave Animations -->
+    <script>
+        document.addEventListener('mouseleave', () => {
+            const sections = document.querySelectorAll('.about-page section');
+            sections.forEach(section => {
+                section.classList.remove('visible');
+            });
+        });
+    </script>
+</body>
+</html>

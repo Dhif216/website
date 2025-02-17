@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Graphic Card Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg"alt="Graphic Card Store Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="landingpage.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="reviews-hero" class="reviews-hero">
+        <div class="container">
+            <h1>What Our Customers Say</h1>
+            <p>Hear from gamers and professionals who trust our products.</p>
+        </div>
+        <div id="particles-js"></div> <!-- Particle.js Background -->
+    </section>
+
+    <!-- Reviews Grid -->
+    <section id="reviews-grid" class="reviews-grid">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"The best graphic card I've ever used! Highly recommended for gamers and professionals alike."</p>
+                    <div class="review-author">
+                        <img src="https://source.unsplash.com/100x100/?person" alt="Customer 1">
+                        <h4>John Doe</h4>
+                        <span>Professional Gamer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Incredible performance and excellent customer service. Worth every penny!"</p>
+                    <div class="review-author">
+                        <img src="https://source.unsplash.com/100x100/?person" alt="Customer 2">
+                        <h4>Jane Smith</h4>
+                        <span>Graphic Designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"A game-changer for my gaming setup. The performance is unmatched!"</p>
+                    <div class="review-author">
+                        <img src="https://source.unsplash.com/100x100/?person" alt="Customer 3">
+                        <h4>Mike Johnson</h4>
+                        <span>Streamer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Testimonials Section -->
+    <section id="floating-testimonials" class="floating-testimonials">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="testimonial">
+                <p>"Unmatched performance and reliability. Trusted by millions worldwide."</p>
+            </div>
+            <div class="testimonial">
+                <p>"Cutting-edge technology for gamers and professionals alike."</p>
+            </div>
+            <div class="testimonial">
+                <p>"Exceptional customer support and a passion for innovation."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Graphic Card Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Particle.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- JavaScript for Particle.js Background -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js loaded!');
+        });
+    </script>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const reviewCards = document.querySelectorAll('.review-card');
+            const testimonials = document.querySelectorAll('.testimonial');
+
+            reviewCards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                    card.style.transitionDelay = `${index * 0.2}s`;
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible');
+                }
+            });
+
+            testimonials.forEach((testimonial, index) => {
+                const rect = testimonial.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                    testimonial.style.transitionDelay = `${index * 0.2}s`;
+                    testimonial.classList.add('visible');
+                } else {
+                    testimonial.classList.remove('visible');
+                }
+            });
+        });
+
+        // Trigger initial check on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
